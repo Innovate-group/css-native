@@ -68,3 +68,22 @@ body {
     width: 100%;
   }
 }
+
+dialog {
+  width: 200px;
+  height: 100%;
+  left: calc(100% - 200px);
+  transition: all 0.3s ease-in-out;
+  animation: modal 0.3s cubic-bezier(0.785, 0.135, 0.15, 0.86) both;
+}
+
+@keyframes modal {
+  from {
+    transform: translateX(120%);
+    opacity: 0.2;
+  }
+  to {
+    transform: translateX(0%);
+    opacity: 1;
+  }
+}
