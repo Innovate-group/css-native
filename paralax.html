@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="MobileOptimized" content="320" />
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+          Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+          sans-serif;
+        list-style: none;
+      }
+
+      body {
+        scroll-behavior: smooth;
+        margin: 0;
+      }
+
+      .contact {
+        background: lightcoral;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100lvh;
+        top: -100lvh;
+        position: absolute;
+        transition: all 0.3s;
+        z-index: 5;
+      }
+
+      .contact a {
+        color: white;
+        text-decoration: none;
+        border: 1px solid white;
+        padding: 5px 10px;
+        border-radius: 10px;
+      }
+
+      #contact:target {
+        top: 0;
+        z-index: 3;
+      }
+
+      #contact:target ~ main {
+        display: none;
+        transition: all 0.3s;
+      }
+
+      header {
+        color: black;
+        padding: 1rem;
+        position: absolute;
+        display: flex;
+        justify-content: right;
+        width: 100%;
+        align-items: center;
+        border: 1px solid black;
+        z-index: 2;
+      }
+
+      header a {
+        color: black;
+        text-decoration: none;
+      }
+
+      .menu {
+        transition: all 0.3s;
+        animation: header 0.3s;
+        position: fixed;
+      }
+
+      @keyframes header {
+        from {
+          top: -100lvh;
+        }
+        to {
+          top: 0;
+        }
+      }
+
+      header nav ul {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        gap: 1rem;
+      }
+
+      main {
+        scroll-snap-type: y mandatory;
+        transition: all 5s;
+        transition-delay: 5s;
+      }
+
+      .hero {
+        background: transparent;
+        position: relative;
+      }
+
+      .hero img {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100lvw;
+        height: 100lvh;
+        object-fit: cover;
+        z-index: -1;
+        aspect-ratio: 16/9;
+        transition: all 0.3s ease-in-out;
+      }
+
+      section {
+        min-height: 100lvh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #fbf7ee;
+        text-align: center;
+        scroll-snap-align: center;
+      }
+
+      .parallax {
+        background: transparent;
+        position: relative;
+        transition: all 0.3s;
+      }
+
+      footer {
+        height: 100dvh;
+      }
+      footer > section {
+        background: black;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <section id="contact" class="contact">
+      <a href="#">Cerrar</a>
+    </section>
+    <header>
+      <nav>
+        <ul>
+          <li>Home</li>
+          <li>About</li>
+          <li>
+            <a href="#contact">Contact</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section class="hero">
+        <img
+          src="https://www.innovategroup.agency/cdn/shop/files/banner-vondom-01.png?v=1669149008"
+          alt=""
+          loading="lazy"
+        />
+        <div>
+          <p>HERO</p>
+        </div>
+      </section>
+      <section>
+        <div>
+          Rem mollitia at architecto tenetur reiciendis nulla minus sapiente
+          repudiandae, fuga voluptates rerum recusandae vitae exercitationem
+          dolor, cumque quae voluptate provident iure? Blanditiis mollitia
+          impedit unde fuga reiciendis beatae ratione!
+        </div>
+      </section>
+      <section class="parallax" data-parallax-1>
+        <style>
+          .parallax {
+            --bgPosition: absolute;
+          }
+          [data-parallax-1]::before {
+            background: url("https://www.innovategroup.agency/cdn/shop/files/banner-saintmalo-01.png?v=1669387158")
+              no-repeat center center / cover;
+            content: "";
+            position: var(--bgPosition);
+            top: 0;
+            left: 0;
+            width: 100lvw;
+            height: 100lvh;
+            z-index: -1;
+            transition: all 0.3s;
+          }
+        </style>
+        <div>
+          <p>Parallax IG Section</p>
+        </div>
+      </section>
+      <section>
+        <div>
+          Nihil reprehenderit mollitia, provident maxime sequi inventore dolore
+          quis qui ut molestias, nesciunt exercitationem voluptatum magni odit
+          fugiat dolorem excepturi accusamus dolor quos. Aliquam inventore
+          assumenda quia hic. Sapiente, quas.
+        </div>
+      </section>
+      <section class="parallax" data-parallax-2>
+        <style>
+          .parallax {
+            --bgPosition: absolute;
+            --bg: url("https://www.innovategroup.agency/cdn/shop/files/banner-saintmalo-01_b0b02823-24b7-4e91-bd20-c8bbbb54c072.png?v=1669638766")
+              no-repeat center center / cover;
+          }
+          [data-parallax-2]::before {
+            background: var(--bg);
+            content: "";
+            position: var(--bgPosition);
+            top: 0;
+            left: 0;
+            width: 100lvw;
+            height: 100lvh;
+            z-index: -1;
+            transition: all 0.3s;
+          }
+        </style>
+        <div>
+          <p>Parallax IG Section</p>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <section>
+        <div>
+          <p>FOOTER</p>
+        </div>
+      </section>
+    </footer>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const header = document.querySelector("header");
+        const parallaxs = document.querySelectorAll(".parallax");
+
+        let lastScroll = 0;
+
+        window.addEventListener("scroll", () => {
+          const currentScroll = window.pageYOffset;
+          currentScroll - lastScroll <= 0
+            ? header.classList.add("menu")
+            : header.classList.remove("menu");
+
+          lastScroll = currentScroll;
+
+          parallaxs.forEach((parallax) => {
+            const parallaxTop = parallax.offsetTop;
+            const position =
+              parallaxTop <= window.scrollY ? "fixed" : "absolute";
+            parallax.style.setProperty("--bgPosition", position);
+
+            if (position !== "fixed") {
+              parallax.style.background = "transparent";
+            }
+          });
+        });
+      });
+    </script>
+  </body>
+</html>

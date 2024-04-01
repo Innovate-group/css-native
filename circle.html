@@ -1,0 +1,43 @@
+<!-- Crear un circulo donde su borde este animado -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Circle</title>
+    <style type="text/css">
+      @keyframes circle {
+        0% {
+          border-top-color: black;
+        }
+        25% {
+          border-top-color: black;
+          border-right-color: black;
+        }
+        50% {
+          border-top-color: black;
+          border-right-color: black;
+          border-bottom-color: black;
+        }
+        100% {
+          border-top-color: black;
+          border-right-color: black;
+          border-bottom-color: black;
+          border-left-color: black;
+        }
+      }
+      .circle {
+        width: 100px;
+        height: 100px;
+        border: 10px solid black;
+        animation: circle 3s;
+        border-top-color: transparent;
+        border-left-color: transparent;
+        border-right-color: transparent;
+        border-bottom-color: transparent;
+        border-radius: 50%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="circle"></div>
+  </body>
+</html>

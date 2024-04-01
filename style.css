@@ -70,11 +70,13 @@ body {
 }
 
 dialog {
-  width: 200px;
+  width: 400px;
   height: 100%;
-  left: calc(100% - 200px);
+  left: calc(100% - 400px);
   transition: all 0.3s ease-in-out;
   animation: modal 0.3s cubic-bezier(0.785, 0.135, 0.15, 0.86) both;
+  border: 0;
+  outline: 0;
 }
 
 @keyframes modal {
