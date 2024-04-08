@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      section {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 1fr 50px 50px 1fr;
+        gap: 2px;
+        height: 100vh;
+        display: grid;
+      }
+
+      div {
+        background-color: #f1c40f;
+        border: 1px solid #2c3e50;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: all 0.5s ease-in-out;
+      }
+
+      div:hover {
+        background-color: burlywood;
+      }
+
+      .first:hover {
+        grid-row: span 2;
+      }
+
+      .second {
+        grid-row-start: 4;
+      }
+
+      .div1 {
+        grid-area: 1 / 1 / 2 / 2;
+      }
+
+      .div2 {
+        grid-area: 1 / 2 / 2 / 3;
+      }
+      .div3 {
+        grid-area: 1 / 3 / 2 / 4;
+      }
+      .div4 {
+        grid-area: 4 / 1 / 5 / 2;
+      }
+      .div5 {
+        grid-area: 4 / 2 / 5 / 3;
+      }
+      .div6 {
+        grid-area: 4 / 3 / 5 / 4;
+      }
+
+      .div4:hover {
+        grid-area: 3 / 1 / 5 / 2;
+      }
+
+      .div5:hover {
+        grid-area: 3 / 2 / 5 / 3;
+      }
+
+      .div6:hover {
+        grid-area: 3 / 3 / 5 / 4;
+      }
+    </style>
+  </head>
+  <body>
+    <section>
+      <div class="div1 first">1</div>
+      <div class="div2 first">2</div>
+      <div class="div3 first">3</div>
+      <div class="div4 second">4</div>
+      <div class="div5 second">5</div>
+      <div class="div6 second">6</div>
+    </section>
+  </body>
+</html>
